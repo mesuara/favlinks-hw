@@ -1,3 +1,5 @@
+import Button from 'react-bootstrap/Button';
+
 function TableHeader(){
     /* responsible for rendering the head of our table with the appropriate columns */
     return(
@@ -22,7 +24,7 @@ const TableBody = (props) => {
             <a href={row.URL}>{row.URL}</a>
           </td>
           <td>
-            <button onClick={() => props.removeLink(index)}>Delete</button>
+            <Button onClick={() => props.removeLink(index)}>Delete</Button>
           </td>
         </tr>
       )

@@ -1,4 +1,6 @@
 import {useState} from 'react'
+import Button from 'react-bootstrap/Button';
+
 
 function Form(props){
     const [name, setName] = useState("")
@@ -22,7 +24,7 @@ function Form(props){
             }}/>
             <br/>
             <br />
-            <input type="submit" value="Submit"></input>
+            <Button type="submit" value="Submit" variant="primary">Submit</Button>
         </form>
     )
 }
