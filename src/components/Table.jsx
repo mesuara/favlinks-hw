@@ -34,8 +34,9 @@ const TableBody = (props) => {
 
 function Table(props){
 
-  const handleRemove = (inedx)=> {
+  const handleRemove = (index)=> {
     console.log("button clicked", index)
+    props.removeLink(index)
   }
     return(
         <table>
