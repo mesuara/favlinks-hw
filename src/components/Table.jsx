@@ -32,7 +32,7 @@ const TableBody = (props) => {
   }
 
 
-function Table(){
+function Table(props){
 
   const handleRemove = (inedx)=> {
     console.log("button clicked", index)
@@ -40,7 +40,7 @@ function Table(){
     return(
         <table>
         <TableHeader/>
-        <TableBody linkData={[]} removeLink={handleRemove}/>
+        <TableBody linkData={props.linkData} removeLink={handleRemove}/>
         </table>
     )
 }
