@@ -7,7 +7,8 @@ function Form(props){
         <form onSubmit={(event)=>{
             event.preventDefault();
             props.onNewSubmit({name,URL})
-            console.log(name, URL)
+            event.target.reset()
+          
         }}>
             <label >Link Name:</label>
             <input type="text" id="linkName" name="linkName" onChange={(event)=>{
