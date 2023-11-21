@@ -1,31 +1,37 @@
 import {useState} from 'react'
 import Button from 'react-bootstrap/Button';
+import FormBS from 'react-bootstrap/Form';
 
 
 function Form(props){
     const [name, setName] = useState("")
     const [URL, setURL] = useState("")
     return(
-        <form onSubmit={(event)=>{
+        <FormBS onSubmit={(event)=>{
             event.preventDefault();
             props.onNewSubmit({name,URL})
             event.target.reset()
           
         }}>
-            <label >Link Name:</label>
-            <input type="text" id="linkName" name="linkName" onChange={(event)=>{
+            <FormBS.Group className="mb-3">
+            <FormBS.Label >Link Name:</FormBS.Label>
+            <FormBS.Control type="text" id="linkName" name="linkName" onChange={(event)=>{
                 setName(event.target.value)
             }}  />
+
+            </FormBS.Group>
             <br />
             <br />
-            <label >Link URL:</label>
-            <input type="text" id="linkURL" name="linkURL" onChange={(event)=>{
+            <FormBS.Group className="mb-3">
+            <FormBS.Label >Link URL:</FormBS.Label>
+            <FormBS.Control type="text" id="linkURL" name="linkURL" onChange={(event)=>{
                 setURL(event.target.value)
             }}/>
+            </FormBS.Group>
             <br/>
             <br />
             <Button type="submit" value="Submit" variant="primary">Submit</Button>
-        </form>
+        </FormBS>
     )
 }
 

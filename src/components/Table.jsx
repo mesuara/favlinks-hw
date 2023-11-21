@@ -1,4 +1,5 @@
 import Button from 'react-bootstrap/Button';
+import TableBS from 'react-bootstrap/Table';
 
 function TableHeader(){
     /* responsible for rendering the head of our table with the appropriate columns */
@@ -41,10 +42,10 @@ function Table(props){
     props.removeLink(index)
   }
     return(
-        <table>
+        <TableBS striped bordered hover variant="dark" size="sm">
         <TableHeader/>
         <TableBody linkData={props.linkData} removeLink={handleRemove}/>
-        </table>
+        </TableBS>
     )
 }
 
