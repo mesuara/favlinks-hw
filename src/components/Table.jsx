@@ -33,10 +33,14 @@ const TableBody = (props) => {
 
 
 function Table(){
+
+  const handleRemove = (inedx)=> {
+    console.log("button clicked", index)
+  }
     return(
         <table>
         <TableHeader/>
-        <TableBody/>
+        <TableBody linkData={[]} removeLink={handleRemove}/>
         </table>
     )
 }
