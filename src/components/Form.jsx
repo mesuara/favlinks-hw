@@ -7,7 +7,7 @@ function Form(props){
     const [name, setName] = useState("")
     const [URL, setURL] = useState("")
     return(
-        <FormBS onSubmit={(event)=>{
+        <FormBS className="border border-primary p-3" onSubmit={(event)=>{
             event.preventDefault();
             props.onNewSubmit({name,URL})
             event.target.reset()
